@@ -126,7 +126,7 @@ const config: MenuEntry[] = [
       // },
       {
         label: 'Github',
-        href: 'https://github.com/tapswapmoney/Glassswap/',
+        href: 'https://github.com/glassswap?tab=repositories',
         target: '_blank',
       },
       // {
@@ -136,17 +136,17 @@ const config: MenuEntry[] = [
       // },
       {
         label: 'Blog',
-        href: 'https://tapswapmoneydex.medium.com/',
+        href: 'https://glassswapfinance.medium.com/',
         target: '_blank',
       },
       {
         label: 'Announcements',
-        href: 'https://t.me/glassswap',
+        href: 'https://t.me/glassswapchat',
         target: '_blank',
       },
       {
         label: 'Telegram',
-        href: 'https://t.me/tapswapchat',
+        href: 'https://t.me/glassswap',
         target: '_blank',
       },
     ],

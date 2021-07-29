@@ -32,17 +32,17 @@ const TwitterCard = () => {
         <Heading size="lg" mb="24px">
           {TranslateString(10003, 'Announcements')}
         </Heading>
-        {/* <Timeline
+        <Timeline
           dataSource={{
             sourceType: 'profile',
-            screenName: 'glassswap',
+            screenName: 'GlasswapF',
           }}
           options={{
             height: '300',
             chrome: 'noheader, nofooter',
             width: '400',
           }}
-        /> */}
+        />
       </CardBody>
     </StyledTwitterCard>
   )
