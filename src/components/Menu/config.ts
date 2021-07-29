@@ -52,11 +52,11 @@ const config: MenuEntry[] = [
   //   icon: 'PoolIcon',
   //   href: '/pools',
   // },
-  // {
-  //   label: 'Lottery',
-  //   icon: 'TicketIcon',
-  //   href: '/lottery',
-  // },
+  {
+    label: 'Lottery',
+    icon: 'TicketIcon',
+    href: '/coming-soon',
+  },
   // {
   //   label: 'NFT',
   //   icon: 'NftIcon',
@@ -114,7 +114,7 @@ const config: MenuEntry[] = [
   {
     label: 'IFO (comming soon)',
     icon: 'IfoIcon',
-    href: '/',
+    href: '/coming-soon',
   },
   {
     label: 'More',

@@ -18,7 +18,6 @@ import history from './routerHistory'
 // Only pool is included in the main bundle because of it's the most visited page
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
-const Lottery = lazy(() => import('./views/Lottery'))
 const Ifos = lazy(() => import('./views/Ifos'))
 const NotFound = lazy(() => import('./views/NotFound'))
 const Collectibles = lazy(() => import('./views/Collectibles'))
@@ -26,6 +25,8 @@ const Teams = lazy(() => import('./views/Teams'))
 const Team = lazy(() => import('./views/Teams/Team'))
 const Profile = lazy(() => import('./views/Profile'))
 const Bush = lazy(() => import('./views/Bush'))
+const Lottery = lazy(() => import('./views/Lottery'))
+const ComingSoon = lazy(() => import('views/ComingSoon'))
 
 // This config is required for number formating
 BigNumber.config({
@@ -64,6 +65,12 @@ const App: React.FC = () => {
             </Route>
             <Route path="/bush">
               <Bush />
+            </Route>
+            <Route path="/lottery">
+              <Lottery />
+            </Route>
+            <Route path="/coming-soon">
+              <ComingSoon />
             </Route>
             {/* 404 */}
             <Route component={NotFound} />
