@@ -28,7 +28,7 @@ const Bush: React.FC = () => {
   const bnbPriceUSD = usePriceBnbBusd()
   const ethPriceBnb = usePriceEthBnb()
   const cakePrice = usePriceCakeBusd()
-  // const wineBusdfarm = useFarmFromPid(1) // dodoy was here
+  // const wineBusdfarm = useFarmFromPid(2) // dodoy was here
   const [apePrice, setApePrice] = useState(0)
   const block = useBlock()
   const [stackedOnly, setStackedOnly] = useState(false)
