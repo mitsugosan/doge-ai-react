@@ -6,37 +6,17 @@ const config: MenuEntry[] = [
     icon: 'HomeIcon',
     href: '/',
   },
-  // {
-  //   label: 'Trade (New with APE)',
-  //   icon: 'TradeIcon',
-  //   items: [
-  //     {
-  //       label: 'Exchange',
-  //       href:
-  //         'https://swape.glassswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
-  //       target: '_blank',
-  //     },
-  //     {
-  //       label: 'Liquidity',
-  //       href:
-  //         'https://swape.glassswap.money/#/add/0xe9e7cea3dedca5984780bafc599bd69add087d56/0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
-  //       target: '_blank',
-  //     },
-  //   ],
-  // },
   {
     label: 'Trade',
     icon: 'TradeIcon',
     items: [
       {
         label: 'Exchange',
-        href:
-          'https://swap.glassswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
+        href: 'https://pancakeswap.finance/#/swap',
       },
       {
         label: 'Liquidity',
-        href:
-          'https://swap.glassswap.money/#/add/0xe9e7cea3dedca5984780bafc599bd69add087d56/0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
+        href: 'https://pancakeswap.finance/liquidity',
       },
     ],
   },
