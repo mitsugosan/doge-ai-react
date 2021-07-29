@@ -111,11 +111,11 @@ const config: MenuEntry[] = [
       // },
     ],
   },
-  // {
-  //   label: 'IFO',
-  //   icon: 'IfoIcon',
-  //   href: '/ifo',
-  // },
+  {
+    label: 'IFO (comming soon)',
+    icon: 'IfoIcon',
+    href: '/',
+  },
   {
     label: 'More',
     icon: 'MoreIcon',
