@@ -100,7 +100,7 @@ export const usePriceCakeBusd = (): BigNumber => {
   // const bnbPriceUSD = usePriceBnbBusd()
   // const farm = useFarmFromPid(pid)
   // return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
-  const pid = 2 // WINE-BUSD LP // change by 
+  const pid = 2 // WINE-BUSD LP // change by manny villar
   const farm = useFarmFromPid(pid)
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
 }
@@ -251,7 +251,7 @@ export const useTotalValue = (): BigNumber => {
       value = value.plus(val)
     }
   }
-  
+
   // bush (pools)
   for (let i = 0; i < bushs.length; i++) {
     const bush = bushs[i]
@@ -261,7 +261,7 @@ export const useTotalValue = (): BigNumber => {
     if (bush.stakingTokenName === QuoteToken.WINE) {
       bushValue = new BigNumber(bush.totalStaked).div(new BigNumber(10).pow(18)).multipliedBy(cakePrice)
     }
-    
+
     if (!bushValue.isNaN()) {
       value = value.plus(bushValue)
     }
