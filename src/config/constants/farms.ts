@@ -20,7 +20,7 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.busd,
   },
   {
-    pid: 1,
+    pid: 2,
     isOldPsc: true,
     lpSymbol: 'WINE-BUSD LP',
     lpAddresses: {
@@ -36,7 +36,7 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.busd,
   },
   {
-    pid: 2,
+    pid: 1,
     isOldPsc: true,
     lpSymbol: 'WINE-BNB LP',
     lpAddresses: {
@@ -134,9 +134,6 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
-  
-  
-
 ]
 
 export default farms
