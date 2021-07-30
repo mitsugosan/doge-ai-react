@@ -5,6 +5,7 @@ import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from 'views/Home/components/FarmStakingCard'
 import CakeStats from 'views/Home/components/CakeStats'
+import Countdown from 'react-countdown'
 import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import TwitterCard from './components/TwitterCard'
 
@@ -95,6 +96,16 @@ const Home: React.FC = () => {
       <Header>
         <Heading as="h1" size="xl" color="secondary" mb="24px">
           {TranslateString(578, 'AMM +Yield Aggregator on Binance Smartchain')}
+          <Countdown
+            date={new Date('August 12, 2021 16:44:06')}
+            intervalDelay={0}
+            precision={3}
+            renderer={({ formatted }) => (
+              <div>
+                {formatted.days}:{formatted.hours}: {formatted.minutes}:{formatted.seconds} until farming starts
+              </div>
+            )}
+          />
         </Heading>
         <Heading size="lg" color="text">
           <a href="https://swap.glassswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1">
