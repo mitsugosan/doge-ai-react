@@ -31,7 +31,7 @@ const config: MenuEntry[] = [
     href: '/pools',
   },
   {
-    label: 'Launchpad',
+    label: 'Wine Bar',
     icon: 'BushIcon',
     href: '/bush',
   },
