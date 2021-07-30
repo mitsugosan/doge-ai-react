@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useMemo, useState } from 'react'
-import { Box, Button, Link, Modal, Text } from 'glassswap-uikit'
+import { Button, Link, Modal, Text } from 'glassswap-uikit'
 import ModalActions from 'components/ModalActions'
 import { BASE_EXCHANGE_URL } from 'config'
 import styled from 'styled-components'

@@ -9,6 +9,7 @@ interface ContextData {
 const useI18n = () => {
   const { translations } = useContext(TranslationsContext)
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return (translationId: number, fallback: string, data: ContextData = {}) => {
     if (translations[0] === 'error') {
       return fallback

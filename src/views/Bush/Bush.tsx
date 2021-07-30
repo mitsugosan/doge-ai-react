@@ -3,14 +3,14 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
-import { Heading, HelpIcon, Link, Text } from 'glassswap-uikit'
+import { Heading } from 'glassswap-uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
 import useI18n from 'hooks/useI18n'
 import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { useFarms, usePriceBnbBusd, usePools, usePriceEthBnb, usePriceCakeBusd, useFarmFromPid } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePools, usePriceEthBnb, usePriceCakeBusd } from 'state/hooks'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import FlexLayout from 'components/layout/Flex'
 import PoolCard from '../Pools/components/PoolCard'
@@ -36,20 +36,20 @@ const Bush: React.FC = () => {
   const apeReserve = useApePrice()
   apeReserve.then(setApePrice)
 
-  const priceToBnb = (tokenName: string, tokenPrice: BigNumber, quoteToken: QuoteToken): BigNumber => {
-    const tokenPriceBN = new BigNumber(tokenPrice)
-    if (tokenName === 'BNB') {
-      return new BigNumber(1)
-    }
-    if (tokenPrice && quoteToken === QuoteToken.BUSD) {
-      return tokenPriceBN.div(bnbPriceUSD)
-    }
-    return tokenPriceBN
-  }
+  // const priceToBnb = (tokenName: string, tokenPrice: BigNumber, quoteToken: QuoteToken): BigNumber => {
+  //   const tokenPriceBN = new BigNumber(tokenPrice)
+  //   if (tokenName === 'BNB') {
+  //     return new BigNumber(1)
+  //   }
+  //   if (tokenPrice && quoteToken === QuoteToken.BUSD) {
+  //     return tokenPriceBN.div(bnbPriceUSD)
+  //   }
+  //   return tokenPriceBN
+  // }
 
   const poolsWithApy = pools.map((pool) => {
     const isBnbPool = pool.poolCategory === PoolCategory.BINANCE
-    const rewardTokenFarm = farms.find((f) => f.tokenSymbol === pool.tokenName)
+    // const rewardTokenFarm = farms.find((f) => f.tokenSymbol === pool.tokenName)
     const stakingTokenFarm = farms.find((s) => s.tokenSymbol === pool.stakingTokenName)
 
     let tokenPriceVsQuote = stakingTokenFarm?.tokenPriceVsQuote
@@ -63,11 +63,11 @@ const Bush: React.FC = () => {
 
     // /!\ Assume that the farm quote price is BNB
     const stakingTokenPriceInBNB = isBnbPool ? new BigNumber(1) : new BigNumber(tokenPriceVsQuote).times(tempMultiplier)
-    const rewardTokenPriceInBNB = priceToBnb(
-      pool.tokenName,
-      rewardTokenFarm?.tokenPriceVsQuote,
-      rewardTokenFarm?.quoteTokenSymbol,
-    )
+    // const rewardTokenPriceInBNB = priceToBnb(
+    //   pool.tokenName,
+    //   rewardTokenFarm?.tokenPriceVsQuote,
+    //   rewardTokenFarm?.quoteTokenSymbol,
+    // )
 
     const totalRewardPricePerYear = new BigNumber(1).times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
     const totalStakingTokenInPool = stakingTokenPriceInBNB.times(getBalanceNumber(pool.totalStaked))
@@ -125,17 +125,17 @@ const Bush: React.FC = () => {
     }
   `
 
-  const AddressLink = styled(Link)`
-    display: inline-block;
-    font-weight: 400;
-    font-size: 12px;
-    white-space: nowrap;
+  // const AddressLink = styled(Link)`
+  //   display: inline-block;
+  //   font-weight: 400;
+  //   font-size: 12px;
+  //   white-space: nowrap;
 
-    ${({ theme }) => theme.mediaQueries.sm} {
-      font-size: 16px;
-      width: auto;
-    }
-  `
+  //   ${({ theme }) => theme.mediaQueries.sm} {
+  //     font-size: 16px;
+  //     width: auto;
+  //   }
+  // `
 
   return (
     <>

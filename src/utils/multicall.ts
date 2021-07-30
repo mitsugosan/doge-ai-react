@@ -3,7 +3,6 @@ import { Interface } from '@ethersproject/abi'
 import { getWeb3NoAccount } from 'utils/web3'
 import MultiCallAbi from 'config/abi/Multicall.json'
 import { getMulticallAddress } from 'utils/addressHelpers'
-import farmsConfig from '../config/constants/farms'
 
 interface Call {
   address: string // Address of the contract

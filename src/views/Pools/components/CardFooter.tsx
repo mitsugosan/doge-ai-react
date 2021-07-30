@@ -72,9 +72,7 @@ const Row = styled.div`
 const FlexFull = styled.div`
   flex: 1;
 `
-const Label = styled.div`
-  font-size: 14px;
-`
+
 const TokenLink = styled.a`
   font-size: 14px;
   text-decoration: none;
@@ -94,7 +92,6 @@ const StyledText = styled(Text)<TextProps>`
 
 const CardFooter: React.FC<Props> = ({
   projectLink,
-  decimals,
   tokenAddress,
   totalStaked,
   tokenName,

@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
-import { Button, IconButton, useModal, AddIcon, Image, Flex, Text } from 'glassswap-uikit'
+import { Button, IconButton, useModal, AddIcon, Image, Text } from 'glassswap-uikit'
 import { useWeb3React } from '@web3-react/core'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -24,10 +24,8 @@ import WithdrawModal from './WithdrawModal'
 import CompoundModal from './CompoundModal'
 import CardTitle from './CardTitle'
 import Card from './Card'
-import OldSyrupTitle from './OldSyrupTitle'
 import HarvestButton from './HarvestButton'
 import CardFooter from './CardFooter'
-import { usePoolFromPid } from '../../../state/hooks'
 
 interface PoolWithApy extends Pool {
   apy: BigNumber

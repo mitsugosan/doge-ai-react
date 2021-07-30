@@ -3,7 +3,7 @@ import erc20ABI from 'config/abi/erc20.json'
 import masterchefABI from 'config/abi/masterchef.json'
 import multicall from 'utils/multicall'
 import farmsConfig from 'config/constants/farms'
-import { getAddress, getMasterChefAddress } from 'utils/addressHelpers'
+import { getMasterChefAddress } from 'utils/addressHelpers'
 
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 
@@ -66,11 +66,11 @@ export const fetchFarmUserEarnings = async (account: string) => {
       params: [farm.pid, account],
     }
   })
-  
+
   const rawEarnings = await multicall(masterchefABI, calls)
   const parsedEarnings = rawEarnings.map((earnings) => {
     return new BigNumber(earnings).toJSON()
   })
-  
+
   return parsedEarnings
 }

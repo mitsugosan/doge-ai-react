@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HelpIcon, Skeleton, Text } from 'glassswap-uikit'
-import ApyButton from '../FarmCard/ApyButton'
+import { Text } from 'glassswap-uikit'
 
 export interface FeeProps {
   fee: number

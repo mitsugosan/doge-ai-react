@@ -34,7 +34,6 @@ const StyledLinkExternal = styled(LinkExternal)`
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
   bscScanAddress,
-  removed,
   totalValueFormated,
   lpTokenPriceFormated,
   lpLabel,

@@ -3,9 +3,9 @@ import { Route, useRouteMatch, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { Image, Heading, RowType, Toggle, Text, HelpIcon, Link } from 'glassswap-uikit'
+import { Heading, RowType, Toggle, Text } from 'glassswap-uikit'
 import styled from 'styled-components'
-import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
+import { BLOCKS_PER_YEAR } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
 import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePriceEthBusd } from 'state/hooks'
@@ -15,7 +15,6 @@ import { QuoteToken } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { orderBy } from 'lodash'
-import Faq from 'react-faq-component'
 
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import Table from './components/FarmTable/FarmTable'
@@ -42,17 +41,17 @@ const ControlContainer = styled.div`
   }
 `
 
-const AddressLink = styled(Link)`
-  display: inline-block;
-  font-weight: 400;
-  font-size: 12px;
-  white-space: nowrap;
+// const AddressLink = styled(Link)`
+//   display: inline-block;
+//   font-weight: 400;
+//   font-size: 12px;
+//   white-space: nowrap;
 
-  ${({ theme }) => theme.mediaQueries.sm} {
-    font-size: 16px;
-    width: auto;
-  }
-`
+//   ${({ theme }) => theme.mediaQueries.sm} {
+//     font-size: 16px;
+//     width: auto;
+//   }
+// `
 
 const ToggleWrapper = styled.div`
   display: flex;
@@ -103,11 +102,11 @@ const ViewControls = styled.div`
   }
 `
 
-const StyledImage = styled(Image)`
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 58px;
-`
+// const StyledImage = styled(Image)`
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-top: 58px;
+// `
 
 const Header = styled.div`
   padding: 32px 0px;
@@ -122,38 +121,38 @@ const Header = styled.div`
   }
 `
 
-const data = {
-  title: 'FAQ (How it works)',
-  rows: [
-    // {
-    //   title: `What means APE LP ribbon on farms ?`,
-    //   content: `These farms use liquidities from the ApeSwap DEX. To provide LP to these farms, you need to use ApeSwap DEX interface by following <a href="https://swape.glassswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1" target="_blank" style="color: orange;font-weight: bold">this link</a>. Read more about the GlassSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
-    // },
-    {
-      title: 'What means PCS LP ribbon on farms ?',
-      content: `These farms use liquidities from the <strong>P</strong>an<strong>C</strong>ake<strong>S</strong>wap DEX. GlassSwap keep these farms available to be fair with users who paid deposit fees to enter into. To provide LP to these farms, you need to use PanCakeSwap DEX interface by following <a href="https://swap.glassswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1" target="_blank" style="color: orange;font-weight: bold">this link</a>. All futures farms created on GlassSwap will use APE LP. Read more about the GlassSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
-    },
-    {
-      title: 'What means OLD ribbon on farms ?',
-      content: `These legacy farms use liquidities from the <strong>P</strong>an<strong>C</strong>ake<strong>S</strong>wap DEX. They are still active and keep rewarding users inside but the new APE LP farms have better APRs and we invite all your users to move to these farms. Here is a step by step guide to help users moving there liquidities. (<a href="https://tapswapmoneydex.medium.com/step-by-step-guide-to-move-lp-from-pancakeswap-to-apeswap-c28cff9105ac" target="_blank" style="color: orange;font-weight: bold">https://medium.com/@tapswapfinance/step-by-step-guide-to-move-lp-from-pancakeswap-to-apeswap-c28cff9105ac</a>) Read more about the GlassSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
-    },
-    {
-      title: 'What will happens to my liquidities if I stay in OLD farms ?',
-      content: `Your liquidities will always be available for withdrawal. Your funds are SAFU. When all liquidities (or a large amount of at least 80%) will be moved from Pancakeswap to ApeSwap, the actual 2 farms using Pancakeswap will be deactivated. You will always be able to find these farms into the inactive tab and withdraw your funds. When these farms will be deactivated, no more $WINE rewards will be distributed (APR = 0%). Read more about the GlassSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
-    },
-    // {
-    //   title: 'What are the risks of using ApeSawp LP vs PanCakeSwap LP ?',
-    //   content: `<strong>Contract risks</strong> : Apeswap use copies of PanCakeSwap contracts and is audited : <a href="https://github.com/ApeSwapFinance/apeswap-banana-farm/blob/master/audits/ApeSwap_GEMZ_Audit_Report_21.03.05.pdf" target="_blank" style="color: orange;font-weight: bold">https://github.com/ApeSwapFinance/apeswap-banana-farm/blob/master/audits/ApeSwap_GEMZ_Audit_Report_21.03.05.pdf</a> <br><br><strong>Liquidities risks</strong> : Same as using PanCakeSwap pairs : GlassSwap is a young project and our liquidities are still low and volatility is still high. But having liquidities in another place don’t change this “risk”.`,
-    // },
-  ],
-}
+// const data = {
+//   title: 'FAQ (How it works)',
+//   rows: [
+//     // {
+//     //   title: `What means APE LP ribbon on farms ?`,
+//     //   content: `These farms use liquidities from the ApeSwap DEX. To provide LP to these farms, you need to use ApeSwap DEX interface by following <a href="https://swape.glassswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1" target="_blank" style="color: orange;font-weight: bold">this link</a>. Read more about the GlassSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
+//     // },
+//     {
+//       title: 'What means PCS LP ribbon on farms ?',
+//       content: `These farms use liquidities from the <strong>P</strong>an<strong>C</strong>ake<strong>S</strong>wap DEX. GlassSwap keep these farms available to be fair with users who paid deposit fees to enter into. To provide LP to these farms, you need to use PanCakeSwap DEX interface by following <a href="https://swap.glassswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1" target="_blank" style="color: orange;font-weight: bold">this link</a>. All futures farms created on GlassSwap will use APE LP. Read more about the GlassSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
+//     },
+//     {
+//       title: 'What means OLD ribbon on farms ?',
+//       content: `These legacy farms use liquidities from the <strong>P</strong>an<strong>C</strong>ake<strong>S</strong>wap DEX. They are still active and keep rewarding users inside but the new APE LP farms have better APRs and we invite all your users to move to these farms. Here is a step by step guide to help users moving there liquidities. (<a href="https://tapswapmoneydex.medium.com/step-by-step-guide-to-move-lp-from-pancakeswap-to-apeswap-c28cff9105ac" target="_blank" style="color: orange;font-weight: bold">https://medium.com/@tapswapfinance/step-by-step-guide-to-move-lp-from-pancakeswap-to-apeswap-c28cff9105ac</a>) Read more about the GlassSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
+//     },
+//     {
+//       title: 'What will happens to my liquidities if I stay in OLD farms ?',
+//       content: `Your liquidities will always be available for withdrawal. Your funds are SAFU. When all liquidities (or a large amount of at least 80%) will be moved from Pancakeswap to ApeSwap, the actual 2 farms using Pancakeswap will be deactivated. You will always be able to find these farms into the inactive tab and withdraw your funds. When these farms will be deactivated, no more $WINE rewards will be distributed (APR = 0%). Read more about the GlassSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
+//     },
+//     // {
+//     //   title: 'What are the risks of using ApeSawp LP vs PanCakeSwap LP ?',
+//     //   content: `<strong>Contract risks</strong> : Apeswap use copies of PanCakeSwap contracts and is audited : <a href="https://github.com/ApeSwapFinance/apeswap-banana-farm/blob/master/audits/ApeSwap_GEMZ_Audit_Report_21.03.05.pdf" target="_blank" style="color: orange;font-weight: bold">https://github.com/ApeSwapFinance/apeswap-banana-farm/blob/master/audits/ApeSwap_GEMZ_Audit_Report_21.03.05.pdf</a> <br><br><strong>Liquidities risks</strong> : Same as using PanCakeSwap pairs : GlassSwap is a young project and our liquidities are still low and volatility is still high. But having liquidities in another place don’t change this “risk”.`,
+//     // },
+//   ],
+// }
 
-const styles = {
-  bgColor: ({ theme }) => (theme.isDark ? '#36343c' : '#fbfbfb'),
-  titleTextColor: '#4e4e4e',
-  rowTitleColor: '#4e4e4e',
-  rowContentColor: '#6b6b6b',
-}
+// const styles = {
+//   bgColor: ({ theme }) => (theme.isDark ? '#36343c' : '#fbfbfb'),
+//   titleTextColor: '#4e4e4e',
+//   rowTitleColor: '#4e4e4e',
+//   rowContentColor: '#6b6b6b',
+// }
 export interface FarmsProps {
   tokenMode?: boolean
 }

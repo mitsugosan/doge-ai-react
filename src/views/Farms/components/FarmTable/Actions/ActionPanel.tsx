@@ -4,7 +4,6 @@ import useI18n from 'hooks/useI18n'
 import { LinkExternal, Text, Link } from 'glassswap-uikit'
 import { FarmWithStakedValue } from 'views/Farms/components/FarmCard/FarmCard'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
-import { communityFarms } from 'config/constants'
 import { DualTag } from 'components/Tags'
 
 import BigNumber from 'bignumber.js'
@@ -131,7 +130,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({ details, apr, 
   const farm = details
 
   const TranslateString = useI18n()
-  const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses, tokenSymbol, dual } = farm
+  const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses, dual } = farm
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
