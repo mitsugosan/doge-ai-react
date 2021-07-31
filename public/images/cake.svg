@@ -1,7 +1,22 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="64px" height="62px" viewBox="0 0 64 62">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  preserveAspectRatio="none"
+  x="0px"
+  y="0px"
+  width="64px"
+  height="62px"
+  viewBox="0 0 64 62"
+>
 <defs>
-<image id="logo_1_png" x="0" y="0" width="1024" height="1024" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAgAElEQVR4nOy9e7Ct2VEf1muf
+<image
+      id="logo_1_png"
+      x="0"
+      y="0"
+      width="1024"
+      height="1024"
+      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAgAElEQVR4nOy9e7Ct2VEf1muf
 c++de+c9mpFmBHoLZECyXkhikDAYjDCFAcdJmTiYgB3sKoTDIxhSKRcuyvCHH8GOXVSlYgfy
 cpFQlMqYKieWibENiACODKSEEEIyyAj0fs7jPs45u/PH93X379fda19JjO69I31Lmnv2Xo9e
 3b36udb6vi2yla1sZStb2cpWtrKVrWxlK1vZylY+7cu42QhsZStbeXKUO1/+PfcfX7jw4Lnb
@@ -5666,7 +5681,7 @@ UYoooliPXjKMoGBXBoy9N4Dv/rDHkNR75oNonuQoKe4f0qrRKffO/Qed7x7nSfJocAbyQq0Z
 j+6YEQufZLygM9OQ+Rg1jUUwWW5U38ha4k0D/1OLkta68n0URJs6e89syUczsgiVtFXgxMhG
 9dyND8V4EDd6o9RfmQ9Z33XRDR1MytLn4Smk1gKbMb2a7qVeMqkWl4E9gHRx5GNHvO6UB59/
 +xWHvf6DM4vXPpfUsYD3XnzO31689AuHXrL03/7qofCDMHdsGYbCLEAq37Q8xmXUqlH6OZvN
-Pl2CHWYxtapsG0BX15BgZgpS54KGyIEnSCHCyNO/DZfmKSPZOKHGh2gJCOhDG4vHFyOM9uPS
+Pl2CHWYxwineG0BX15BgZgpS54KGyIEnSCHCyNO/DZfmKSPZOKHGh2gJCOhDG4vHFyOM9uPS
 hZdc/LVD/uXFb7rpP975yfPu2bapXijtXfK376d/WX7K7Gs3vOUvT9j1rOvX717/KmkB3b69
 6Ba7Yyy0NKlLIeom1ZajULVAxlCS2nimMDsVxbUa+gH86YzpcQDMQEW8pZ+CcjOCZMdl3Byy
 jL4BV6N2n/DMr9E6XgohhqQ2a4vklEhTvjYqM+XaICtxK9/b+qSguJZqr6xX5aijEwlPoyCp
@@ -9760,12 +9775,13 @@ eUqLhEtlN2gvY2z1dIyzg9W58+eObrp5u9o85bcKb57CQmAp0OypLKBut7IVkYOtnJ0XERHl
 BdhYGH165SktjjaPNiKi281W1seH64PjCyIiup3PSqy4HazYPX381uUDwE9lbFVlbESPDteH
 RzeIbNLiVJ23p87DSksrMLZgmUnWMcZ2nOn66NaD44t3bMdYFPMMd7XS1XY7tptrj989xrg2
 xuZsu7n6pJydXNkerK6MK08+fPrEZz+px8ePnX725OpDv/ujX4ip25d92ZcXSfn/AYXW2hiD
-x/SiAAAAAElFTkSuQmCC"/>
+x/SiAAAAAElFTkSuQmCC"
+    />
 </defs>
 
 <g transform="matrix( 0.12786865234375, 0, 0, 0.12786865234375, 1.85,4.15) ">
 <g transform="matrix( 0.4198150634765625, 0, 0, 0.47186279296875, 23,-31) ">
-<use xlink:href="#logo_1_png"/>
+<use xlink:href="#logo_1_png" />
 </g>
 </g>
 </svg>

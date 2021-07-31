@@ -233,7 +233,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
               color="textDisabled"
               fontSize="14px"
               mt="10px"
-              href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee"
+              href="https://glassswap.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee"
               target="blank"
               rel="noopener noreferrer"
             >

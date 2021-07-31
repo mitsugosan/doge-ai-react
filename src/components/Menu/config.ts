@@ -101,14 +101,6 @@ const config: MenuEntry[] = [
         href: 'https://www.bsc.news/bsc-projects',
         target: '_blank',
       },
-      // {
-      //   label: 'CoinGecko',
-      //   href: 'https://www.coingecko.com/en/coins/tapswaptoken',
-      // },
-      // {
-      //   label: 'CoinMarketCap',
-      //   href: 'https://coinmarketcap.com/currencies/tapswaptoken/',
-      // },
     ],
   },
   {

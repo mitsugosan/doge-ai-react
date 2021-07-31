@@ -68,8 +68,8 @@
   {
     "inputs": [
       {
-        "internalType": "contract TapsToken",
-        "name": "_taps",
+        "internalType": "contract WineToken",
+        "name": "_wine",
         "type": "address"
       },
       {
@@ -376,7 +376,7 @@
     "name": "wine",
     "outputs": [
       {
-        "internalType": "contract TapsToken",
+        "internalType": "contract WineToken",
         "name": "",
         "type": "address"
       }
@@ -461,7 +461,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "accTapsPerShare",
+        "name": "accWinePerShare",
         "type": "uint256"
       },
       {

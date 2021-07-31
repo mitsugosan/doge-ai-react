@@ -151,11 +151,6 @@ const Bush: React.FC = () => {
             <li>{TranslateString(742, 'Deposit fees will be automatically burnt.')}</li>
           </ul>
         </Heading>
-        {/* <Text style={{ marginTop: '10px' }}>
-          <AddressLink href="https://tapswapmoneydex.medium.com/the-bush-next-evolution-d9e316be71f1" color="text" external>
-            <HelpIcon color="textSubtle" /> {TranslateString(743, 'Learn more about Winebar')}
-          </AddressLink>
-        </Text> */}
       </Header>
       <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       <Divider />
