@@ -108,7 +108,7 @@ const Home: React.FC = () => {
           />
         </Heading>
         <Heading size="lg" color="text">
-          <a href="https://swap.glassswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1">
+          <a href="https://pancakeswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1">
             <Button variant="primary">
               {TranslateString(733, 'BUY')}{' '}
               <TokenImage src="/images/farms/wine.png" alt="WINE Token" width="70" height="70" />{' '}

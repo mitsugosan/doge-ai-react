@@ -141,7 +141,7 @@ const Bush: React.FC = () => {
     <>
       <Header>
         <Heading as="h1" size="xl" color="secondary" mb="24px">
-          {TranslateString(999, 'Launchpad')}
+          {TranslateString(999, 'Winebar')}
         </Heading>
         <Heading size="md" color="text">
           <ul>
@@ -153,7 +153,7 @@ const Bush: React.FC = () => {
         </Heading>
         {/* <Text style={{ marginTop: '10px' }}>
           <AddressLink href="https://tapswapmoneydex.medium.com/the-bush-next-evolution-d9e316be71f1" color="text" external>
-            <HelpIcon color="textSubtle" /> {TranslateString(743, 'Learn more about Launchpad')}
+            <HelpIcon color="textSubtle" /> {TranslateString(743, 'Learn more about Winebar')}
           </AddressLink>
         </Text> */}
       </Header>

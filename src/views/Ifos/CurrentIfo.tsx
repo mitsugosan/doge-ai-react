@@ -52,10 +52,10 @@ const Ifo = () => {
             <li>{TranslateString(598, 'Get CAKE-BNB LP tokens by adding CAKE and BNB liquidity')}</li>
           </List>
           <Flex mb="16px">
-            <LinkExternal href="https://swap.glassswap.money/#/swap" mr="16px">
+            <LinkExternal href="https://pancakeswap.finance/#/swap" mr="16px">
               {TranslateString(1060, 'Buy WINE')}
             </LinkExternal>
-            <LinkExternal href="https://swap.glassswap.money/#/add/ETH/0xc0699dcAf5AE66D36881cae93120c851dB6986c1">
+            <LinkExternal href="https://pancakeswap.finance/#/add/ETH/0xc0699dcAf5AE66D36881cae93120c851dB6986c1">
               {TranslateString(1062, 'Get LP tokens')}
             </LinkExternal>
           </Flex>
