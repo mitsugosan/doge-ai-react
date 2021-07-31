@@ -4,7 +4,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 98, // V1
     tokenName: 'USDT',
-    tokenLabel: 'USDT v1',
+    tokenLabel: 'USDT',
     tokenAddress: '0x55d398326f99059ff775485246999027b3197955',
     stakingTokenName: QuoteToken.WINE,
     stakingTokenAddress: '0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
@@ -28,7 +28,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 99, // V1
     tokenName: 'ETH',
-    tokenLabel: 'ETH v1',
+    tokenLabel: 'ETH',
     tokenAddress: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
     stakingTokenName: QuoteToken.WINE,
     stakingTokenAddress: '0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
@@ -52,7 +52,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 100, // V1
     tokenName: 'WBNB',
-    tokenLabel: 'WBNB v1',
+    tokenLabel: 'WBNB',
     tokenAddress: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     stakingTokenName: QuoteToken.WINE,
     stakingTokenAddress: '0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
@@ -76,7 +76,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 101, // V1
     tokenName: 'DOT',
-    tokenLabel: 'DOT v1',
+    tokenLabel: 'DOT',
     tokenAddress: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402',
     stakingTokenName: QuoteToken.WINE,
     stakingTokenAddress: '0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
@@ -100,7 +100,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 102, // V1
     tokenName: 'BTCB',
-    tokenLabel: 'BTCB v1',
+    tokenLabel: 'BTCB',
     tokenAddress: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
     stakingTokenName: QuoteToken.WINE,
     stakingTokenAddress: '0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
@@ -113,6 +113,30 @@ const pools: PoolConfig[] = [
     projectLink: 'https://www.binance.com',
     harvest: true,
     tokenPerBlock: '0.0000025',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    isBush: true,
+    isLp: false,
+    bushVersion: 1,
+    getUrl: '/#/swap?outputCurrency=0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
+  },
+  {
+    sousId: 103, // V1
+    tokenName: 'CAKE',
+    tokenLabel: 'CAKE',
+    tokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    stakingTokenName: QuoteToken.WINE,
+    stakingTokenAddress: '0xc0699dcAf5AE66D36881cae93120c851dB6986c1',
+    stakingTokenDecimals: 18,
+    contractAddress: {
+      97: '',
+      56: '0x6FDC4f9d7c27b8f6746cAef1514Ec0bC35Dc52b5',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://www.binance.com/',
+    harvest: true,
+    tokenPerBlock: '0.005',
     sortOrder: 999,
     isFinished: false,
     tokenDecimals: 18,
